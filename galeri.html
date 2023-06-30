@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Web Profil Desa Slopeng, Kec. Dasuk, Kab. Sumenep, Indonesia">
+    <meta name="author" content="Fajar Fatha Romadhan">
+
+    <title>DataDesa Slopeng</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.ico"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+      #gallery {
+          position: relative;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          /* background-color: #ffeac3; */
+          /* padding: 10px; */
+          grid-gap: 30px;
+          place-items: center;
+      }
+
+      #gallery img {
+          border-radius: 10px;
+          transition: transform 0.3s;
+          transition-timing-function: ease-in-out;
+          width: 200px;
+          height: 200px;
+      }
+      /* 
+      .grid-item img {
+          width: 100%;
+          height: auto;
+      } */
+
+      #gallery img:hover {
+          transform: scale(1.2);
+      }
+
+      #overlay {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.7);
+          z-index: 9999;
+          user-select: none;
+      }
+
+      #popup {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          /* background-color: #fff; */
+          /* padding: 20px; */
+          text-align: center;
+      }
+
+      #popup img {
+          max-width: 700px;
+          height: auto;
+          /* margin-bottom: 20px; */
+      }
+
+      .prev, .next {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 30px;
+          color: #fff;
+          background-color: rgba(0, 0, 0, 0.3);
+          padding: 10px;
+          cursor: pointer;
+      }
+
+      .prev {
+          left: 10px;
+      }
+
+      .next {
+          right: 10px;
+      }
+
+      @media (max-width: 1060px) {
+          #gallery {
+              grid-template-columns: repeat(4, 1fr);
+          }
+          #popup img {
+              max-width: 600px;
+          }
+      }
+
+      @media (max-width: 920px) {
+          #gallery {
+              grid-template-columns: repeat(3, 1fr);
+          }
+          #popup img {
+              max-width: 500px;
+          }
+      }
+
+      @media (max-width: 800px) {
+          #gallery {
+              grid-template-columns: repeat(2, 1fr);
+          }
+          #popup img {
+              max-width: 400px;
+          }
+      }
+
+      @media (max-width: 460px) {
+          #gallery {
+              grid-template-columns: repeat(1, 1fr);
+          }
+          #popup img {
+              max-width: 300px;
+          }
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="css/agencyyy.min.css">
+    <!-- <link href="css/agency.css" rel="stylesheet"> -->
+  </head>
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: black;">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Desa Slopeng</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <div class="dropdown">
+                <a class="nav-link js-scroll-trigger" href="index.html">Profil</a>
+                <div class="dropdown-content">
+                  <a class="nav-link js-scroll-trigger" id="first" href="index.html#about">Sejarah</a>
+                  <a class="nav-link js-scroll-trigger" href="index.html#portfolio">Geografis</a>
+                  <a class="nav-link js-scroll-trigger" href="index.html#struktur">Struktur Pemerintahan</a>
+                  <a class="nav-link js-scroll-trigger" href="index.html#wisata">Wisata</a>
+                  <a class="nav-link js-scroll-trigger" href="index.html#kesenian">Kesenian</a>
+                  <a class="nav-link js-scroll-trigger" href="index.html#services">Lembaga Desa</a>
+                </div>
+              </div>
+              <!-- <a class="nav-link js-scroll-trigger" href="index.html">Profil</a> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="galeri.html">Galeri</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="berita.html">Berita Desa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="tentang.html">Tentang</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sejarah Desa Slopeng -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Galeri</h2>
+            <center>
+              <div id="gallery"> 
+                <img src="img/galeri/balaidesa.jpg">
+                <img src="img/slopeng1.jpg">
+                <img src="img/galeri/belakangbalaidesa.jpg">
+                <img src="img/galeri/jamuan.jpg">
+                <img src="img/galeri/kampungKB.jpg">
+                <img src="img/galeri/kebun.jpg">
+                <!-- <img src="img/slopeng1.jpg">
+                <img src="img/slopeng1.jpg">
+                <img src="img/slopeng1.jpg">
+                <img src="img/slopeng1.jpg"> -->
+            </div>
+            </center>
+          <div id="overlay">
+              <div id="popup">
+                  <span class="prev"><</span>
+                  <img src="">
+                  <span class="next">></span>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
