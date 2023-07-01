@@ -36,3 +36,28 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 });
+
+function openModal(newsId) {
+  var modal = document.getElementById("modal");
+  var modalTitle = document.getElementById("modal-title");
+  var modalDescription = document.getElementById("modal-description");
+  var modalDate = document.getElementById("modal-date");
+
+  // Set konten modal berdasarkan ID berita yang diklik
+  if (newsId === 1) {
+    modalTitle.innerHTML = "Judul Berita 1";
+    modalDescription.innerHTML = "Isi berita 1...";
+    modalDate.innerHTML = "Tanggal Berita 1";
+  } else if (newsId === 2) {
+    modalTitle.innerHTML = "Judul Berita 2";
+    modalDescription.innerHTML = "Isi berita 2...";
+    modalDate.innerHTML = "Tanggal Berita 2";
+  }
+
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  var modal = document.getElementById("modal");
+  modal.style.display = "none";
+}
